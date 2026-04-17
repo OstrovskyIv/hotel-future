@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/* Настройки темы через стандартные CSS переменные */
+:root {
+  --color-accent: #d4af37;
+  --bg-main: #050505;
+}
+
+[data-theme='neon'] {
+  --color-accent: #00f2ff;
+  --bg-main: #020b12;
+}
+
+[data-theme='minimal'] {
+  --color-accent: #ffffff;
+  --bg-main: #0a0a0a;
+}
+
+body {
+  /* ТЕМНОЕ ФОТО ОТЕЛЯ НА ФОН */
+  background-image:
+    linear-gradient(rgba(5, 5, 5, 0.96), rgba(5, 5, 5, 0.98)),
+    url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+
+  background-color: var(--bg-main);
+  color: #e2e8f0;
+  transition: all 0.7s ease;
+  font-family: 'Inter', system-ui, sans-serif;
+  @apply antialiased;
+}
+
+/* Глобальный фикс для длинных слов */
+h1, h2, h3, h4 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Утилиты */
+.text-accent { color: var(--color-accent); }
+.bg-accent { background-color: var(--color-accent); }
+.border-accent { border-color: var(--color-accent); }
+
+.gold-gradient {
+  background: linear-gradient(135deg, var(--color-accent) 0%, #f9d976 50%, #b8860b 100%);
+}
+
+.shadow-accent {
+  box-shadow: 0 0 50px rgba(212, 175, 55, 0.1);
+}
+
+/* Красивый скроллбар */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #050505; }
+::-webkit-scrollbar-thumb { background: var(--color-accent); border-radius: 10px; }
