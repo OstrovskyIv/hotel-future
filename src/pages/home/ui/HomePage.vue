@@ -7,7 +7,11 @@ defineEmits(['open-lightbox'])
 <template>
   <div class="animate-in fade-in duration-1000">
     <section class="h-screen relative flex items-center justify-center overflow-hidden">
-      <img src="/hotel-main.webp" class="absolute inset-0 w-full h-full object-cover scale-105 animate-subtle-zoom" alt="Hero" />
+      <img
+        src="/hotel-main.webp"
+        class="absolute inset-0 w-full h-full object-cover scale-105 animate-subtle-zoom"
+        alt="Hero"
+      />
       <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
 
       <div class="relative z-10 text-center px-6">
